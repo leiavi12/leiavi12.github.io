@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    
     <script>
         if(localStorage.getItem('data-theme')) {
             document.documentElement.setAttribute('data-theme', localStorage.getItem('data-theme'));
@@ -29,6 +30,8 @@
         <div class="mode">
             <a href="#" id="theme-toggle"><i id="theme-icon" class="sun"></i></a>
         </div>
+
+        <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">⋮</button>
 
         <script src="script.js"></script>
         

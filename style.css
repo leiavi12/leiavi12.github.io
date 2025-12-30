@@ -852,3 +852,31 @@ img { max-width: 100%; height: auto; display: block; }
   .contact-form input, .contact-form textarea { padding: 8px; }
 }
 
+/* Mobile nav toggle + small-screen nav menu */
+#nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 6px;
+}
+
+@media (max-width: 820px) {
+  #nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+
+  .navi { display: none; position: fixed; top: calc(var(--header-height)); right: 12px; 
+         background: var(--card-bg); gap: 8px; padding: 12px; border-radius: 10px; 
+         box-shadow: 0 12px 30px rgba(0,0,0,0.18); z-index: 1300; width: 220px; flex-direction: column; }
+
+  .navi.open { display: flex; }
+
+  .navi a { padding: 8px 10px; border-radius: 6px; display: block; }
+
+  header { overflow: visible; }
+
+  .ab { flex-direction: row; gap: 8px; align-items: center; justify-content: center; }
+
+  .a1, .aa1, .aa2, .kill1, .kill2, .kill3 { width: 100%; max-width: 720px; height: auto; }
+}

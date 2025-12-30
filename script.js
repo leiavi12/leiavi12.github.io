@@ -30,3 +30,26 @@ function updateIcon(theme){
         themeIcon.classList.add('sun');
     }
 }
+
+const navToggle = document.getElementById('nav-toggle');
+const navi = document.querySelector('.navi');
+
+if (navToggle && navi) {
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const opened = navi.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', opened ? 'true' : 'false');
+  });
+
+  navi.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navi.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  document.addEventListener('click', (e) => {
+    if (!navi.contains(e.target) && e.target !== navToggle) {
+      navi.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
