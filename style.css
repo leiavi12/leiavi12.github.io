@@ -834,6 +834,16 @@ img { max-width: 100%; height: auto; display: block; }
   body { font-size: 15px; }
 }
 
+@media (max-width: 1100px) {
+  #home { flex-direction: column; padding-top: calc(var(--header-height) + 12px); padding: 20px; gap:18px; }
+  .h1img { width: 200px; height: 200px; }
+  .hh2 { font-size: 28px; text-align:center; }
+  #about, #skill, #project, .contact-container { flex-direction: column; padding: 18px; gap:16px; }
+  .a1, .aa1, .aa2, .kill1, .kill2, .kill3, .project-card { width: 100%; max-width: 720px; height: auto; }
+  .project-thumb { width: 100%; max-width: 320px; height: auto; }
+  body { font-size: 15px; }
+}
+
 @media (max-width: 420px) {
   .h1img { width: 140px; height: 140px; }
   .hh2 { font-size: 22px; }
